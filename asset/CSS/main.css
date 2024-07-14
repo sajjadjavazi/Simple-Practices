@@ -41,6 +41,20 @@ body {
     padding: 10px 14px;
 }
 
+.icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.post-icons {
+    display: flex;
+}
+
+.post-save-icon {
+    display: flex;
+}
+
 .likes-comments {
     margin-bottom: 8px;
 }
