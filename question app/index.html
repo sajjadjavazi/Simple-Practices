@@ -9,7 +9,41 @@
 </head>
 
 <body>
-
+    <div class="container">
+        <h1>پرسشنامه</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. پایتخت ایران کجاست؟</p>
+                <input type="radio" name="q1" value="0"> شیراز<br>
+                <input type="radio" name="q1" value="1"> تهران<br>
+                <input type="radio" name="q1" value="0"> اصفهان<br>
+                <input type="radio" name="q1" value="0"> تبریز<br>
+            </div>
+            <div class="question">
+                <p>2. بزرگترین قاره جهان کدام است؟</p>
+                <input type="radio" name="q2" value="1"> آسیا<br>
+                <input type="radio" name="q2" value="0"> اروپا<br>
+                <input type="radio" name="q2" value="0"> آفریقا<br>
+                <input type="radio" name="q2" value="0"> آمریکای شمالی<br>
+            </div>
+            <div class="question">
+                <p>3. کدام حیوان سریعترین حیوان روی خشکی است؟</p>
+                <input type="radio" name="q3" value="0"> شیر<br>
+                <input type="radio" name="q3" value="0"> ببر<br>
+                <input type="radio" name="q3" value="1"> یوزپلنگ<br>
+                <input type="radio" name="q3" value="0"> گرگ<br>
+            </div>
+            <div class="question">
+                <p>4. بلندترین کوه جهان چیست؟</p>
+                <input type="radio" name="q4" value="0"> کوه کلیمانجارو<br>
+                <input type="radio" name="q4" value="0"> کوه البرز<br>
+                <input type="radio" name="q4" value="0"> کوه زاگرس<br>
+                <input type="radio" name="q4" value="1"> کوه اورست<br>
+            </div>
+            <button type="button" onclick="calculateScore()">ارسال</button>
+        </form>
+        <div id="result"></div>
+    </div>
     <script src="index.js"></script>
 </body>
 

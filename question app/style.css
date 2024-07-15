@@ -1,0 +1,48 @@
+@import url('https://fonts.cdnfonts.com/css/iransansx');
+
+body {
+    font-family: 'IRANSansX', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    direction: rtl;
+    width: 300px;
+}
+
+h1 {
+    margin: 0 0 20px;
+}
+
+.question {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
