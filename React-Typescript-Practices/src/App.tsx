@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
   const [visible, setVisible] = useState(false);
+  const [textArea, setTextArea] = useState("");
 
   function handleCount() {
     setCount(count + 1);
@@ -16,6 +17,11 @@ function App() {
   function handleVisibility() {
     setVisible(!visible);
   }
+
+  const handleTextArea = (e: { target: { value: SetStateAction<string>; }; }) => {
+    setTextArea(e.target.value);
+  };
+
   return (
     <>
       <div className="flex items-center justify-center">
@@ -54,7 +60,17 @@ function App() {
         )}
       </div>
       <hr />
-
+      <div className="flex items-center m-4">
+        <textarea
+          className="bg-slate-100 p-2 rounded-lg mr-3 overflow-auto w-52 h-24"
+          placeholder="write something"
+          value={textArea}
+          onChange={handleTextArea}
+        />
+        <p className="bg-amber-400 py-2 px-3 rounded-lg">
+          Character count: {textArea.length}
+        </p>
+      </div>
     </>
   );
 }
