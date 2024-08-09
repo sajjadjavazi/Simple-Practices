@@ -12,23 +12,27 @@ function App() {
   const [todos, setTodos] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState("");
 
-
+  // Increment function
   function handleCount() {
     setCount(count + 1);
   }
 
+  //Text input function
   function handleText(event: React.ChangeEvent<HTMLInputElement>) {
     setText(event.target.value);
   }
 
+  //Toggle function
   function handleVisibility() {
     setVisible(!visible);
   }
 
+  //Textarea length counter
   const handleTextArea = (e: { target: { value: SetStateAction<string> } }) => {
     setTextArea(e.target.value);
   };
 
+  //Todo functions
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
     setInputValue(e.target.value);
   }
@@ -41,11 +45,13 @@ function App() {
   function handleDelete(index: string | number) {
     setTodos(todos.filter((_, i) => i !== index));
   }
+
   return (
     <>
       <div className="flex items-center justify-center">
         <h1 className="bg-green-400 py-3 px-10 m-2 rounded-lg">useState</h1>
       </div>
+      {/* Increment */}
       <div className="m-4 flex items-center">
         <button
           className="bg-slate-500 p-3 mr-3 text-white rounded-lg"
@@ -56,6 +62,7 @@ function App() {
         <p className="bg-amber-400 p-3 rounded-lg">Count: {count}</p>
       </div>
       <hr />
+      {/* Text input */}
       <div className="flex items-center m-4">
         <label htmlFor="#">write something:</label>
         <input
@@ -67,6 +74,7 @@ function App() {
         <p className="bg-amber-400 py-2 px-3 rounded-lg">Input text: {text}</p>
       </div>
       <hr />
+      {/* Show/Hide Toggle */}
       <div className="flex items-center m-4">
         <button
           className="bg-slate-500 py-2 px-3 mr-3 text-white rounded-lg"
@@ -79,6 +87,7 @@ function App() {
         )}
       </div>
       <hr />
+      {/* Textarea lenght counter */}
       <div className="flex items-center m-4">
         <textarea
           className="bg-slate-100 p-2 rounded-lg mr-3 overflow-auto w-52 h-24"
@@ -91,6 +100,7 @@ function App() {
         </p>
       </div>
       <hr />
+      {/* Todo mini app */}
       <div className="flex items-center m-4">
         <input
           className="mr-3 ml-1 rounded-lg p-2 bg-slate-100"
