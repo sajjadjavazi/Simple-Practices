@@ -2,9 +2,14 @@ import { useState } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [text, setText] = useState("");
 
   function handleCount() {
     setCount(count + 1);
+  }
+
+  function handleText(event: React.ChangeEvent<HTMLInputElement>){
+    setText(event.target.value)
   }
   return (
     <>
@@ -21,7 +26,11 @@ function App() {
         <p className="bg-amber-400 p-5 rounded-lg">Count: {count}</p>
       </div>
       <hr />
-      
+      <div className="flex items-center m-4">
+        <label htmlFor="#">write something:</label>
+        <input className="mr-3 ml-1 rounded-lg p-2 bg-slate-100" type="text" onChange={handleText}/>
+        <p className="bg-amber-400 py-2 px-3 rounded-lg">Input text: {text}</p>
+      </div>
     </>
   );
 }
