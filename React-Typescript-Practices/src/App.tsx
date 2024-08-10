@@ -14,6 +14,20 @@ function App() {
 
   const [color, setColor] = useState("");
 
+  const [search, setSearch] = useState("");
+  const items = [
+    "Apple",
+    "Banana",
+    "Carrot",
+    "Date",
+    "Eggplant",
+    "Fig",
+    "Grape",
+  ];
+  const filterdItems = items.filter((item) =>
+    item.toLowerCase().includes(search.toLowerCase())
+  );
+
   // Increment function
   function handleCount() {
     setCount(count + 1);
@@ -51,6 +65,11 @@ function App() {
   //Color Switcher
   function handleColorSwitch(e: React.ChangeEvent<HTMLSelectElement>) {
     setColor(e.target.value);
+  }
+
+  //Search filter
+  function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
+    setSearch(e.target.value);
   }
 
   return (
@@ -147,11 +166,31 @@ function App() {
           <option value="red">Red</option>
           <option value="blue">Blue</option>
           <option value="green">Green</option>
+          <option value="yellow">yellow</option>
+          <option value="purple">purple</option>
+          <option value="brown">brown</option>
         </select>
         <div
           className="w-96 h-28 border-black border rounded-lg"
           style={{ background: color }}
         ></div>
+      </div>
+      <hr />
+      {/* Search filter */}
+      <div className="flex items-start m-4">
+        <input
+          type="text"
+          onChange={handleSearch}
+          className="bg-slate-100 px-3 py-2 rounded-lg mr-4"
+          placeholder="Search your item"
+        />
+        <ul className="flex">
+          {filterdItems.map((item, index) => (
+            <li key={index} className="mr-3 bg-amber-400 p-2 rounded-lg">
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );
