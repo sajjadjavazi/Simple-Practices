@@ -12,6 +12,8 @@ function App() {
   const [todos, setTodos] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState("");
 
+  const [color, setColor] = useState("");
+
   // Increment function
   function handleCount() {
     setCount(count + 1);
@@ -44,6 +46,11 @@ function App() {
   }
   function handleDelete(index: string | number) {
     setTodos(todos.filter((_, i) => i !== index));
+  }
+
+  //Color Switcher
+  function handleColorSwitch(e: React.ChangeEvent<HTMLSelectElement>) {
+    setColor(e.target.value);
   }
 
   return (
@@ -128,6 +135,23 @@ function App() {
             </li>
           ))}
         </ul>
+      </div>
+      <hr />
+      {/* Color switcher */}
+      <div className="flex items-start m-4">
+        <select
+          onChange={handleColorSwitch}
+          className="rounded-md px-4 py-2 mr-10 bg-slate-100"
+        >
+          <option value="">Select a color</option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
+        <div
+          className="w-96 h-28 border-black border rounded-lg"
+          style={{ background: color }}
+        ></div>
       </div>
     </>
   );
