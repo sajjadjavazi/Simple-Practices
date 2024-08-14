@@ -1,6 +1,6 @@
 # Simple Practices | [Demo](https://sajjadjavazi.github.io/Simple-Practices/ "Demo") 
 ##  Description
-**12 mini projects that are good for learning the basics of web design and functionality. Check out my latest creation now available for a live [Demo](https://sajjadjavazi.github.io/Simple-Practices/ "Demo")!**
+**13 mini projects that are good for learning the basics of web design and functionality. Check out my latest creation now available for a live [Demo](https://sajjadjavazi.github.io/Simple-Practices/ "Demo")!**
 
 ## Features
 -  User friendly design
