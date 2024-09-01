@@ -14,6 +14,11 @@
 - Tailwind
 - React
 - TypeScript
+ <p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,vite,react,ts,tailwind,git,github,npm,vscode&theme=dark" />
+  </a>
+</p>
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
