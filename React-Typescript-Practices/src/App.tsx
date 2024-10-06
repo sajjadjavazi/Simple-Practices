@@ -1,8 +1,12 @@
-import UseState from './components/useState';
+import UseEffect from './components/UseEffect';
+import UseState from './components/UseState';
 
 const App = () => {
   return (
-    <UseState />
+    <>
+      <UseState />
+      <UseEffect />
+    </>
   );
 }
 
